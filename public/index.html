@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ghostlights</title>
+<meta name="description" content="Ghostlights: shows made from one piece of writing, where every fact carries its witness. This copy carries one sample show.">
+<link rel="stylesheet" href="/site.css">
+</head>
+<body>
+<main class="stage">
+  <svg class="lamp" viewBox="0 0 200 320" role="img" aria-labelledby="lamp-t">
+    <title id="lamp-t">A ghost light: one bare bulb in a cage on a tall stand, glowing on an empty stage.</title>
+    <defs>
+      <radialGradient id="lamp-glow" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stop-color="#ffe9b0" stop-opacity="0.95"/>
+        <stop offset="35%" stop-color="#ffcf6a" stop-opacity="0.35"/>
+        <stop offset="100%" stop-color="#ffcf6a" stop-opacity="0"/>
+      </radialGradient>
+    </defs>
+    <circle cx="100" cy="70" r="70" fill="url(#lamp-glow)"/>
+    <ellipse cx="100" cy="74" rx="15" ry="19" fill="#fff4d6"/>
+    <path d="M84 66 Q100 34 116 66 M86 84 L114 84 M84 66 L86 84 M116 66 L114 84 M100 50 L100 88" fill="none" stroke="#6b5a3e" stroke-width="2.5"/>
+    <rect x="94" y="88" width="12" height="10" rx="2" fill="#6b5a3e"/>
+    <rect x="97" y="98" width="6" height="190" fill="#4a3f30"/>
+    <path d="M70 300 L100 280 L130 300" fill="none" stroke="#4a3f30" stroke-width="6" stroke-linecap="round"/>
+    <ellipse cx="100" cy="304" rx="70" ry="7" fill="#000" opacity="0.35"/>
+  </svg>
+
+  <h1>Ghostlights</h1>
+  <p class="lede">A ghost light is the one lamp left burning on an empty stage, so whoever comes in first can find their way.</p>
+  <p>Here, a ghostlight is a show made from one piece of writing. Each claim in it names its witness: the file it came from, when it was read, and a hash of what was read, so a reader can go and check.</p>
+
+  <h2>Now showing</h2>
+  <a class="show" href="/to-the-two-readers/">
+    <span class="show-title">To the Two Readers</span>
+    <span class="show-sub">A mark from Corwin's hand: the line is written, TRUE is struck, "two" comes in another ink, and the page turns to the reader across the table. Read with the paper it answers, every line with its witness.</span>
+  </a>
+  <p class="howto">This is the sample stage that ships with the theatre. Add a show as a folder beside <code>to-the-two-readers/</code> and a link like the one above.</p>
+</main>
+<footer>
+  <p>Made at <a href="https://github.com/inputloop">inputloop</a>. Words and pictures: Copyright 2026 Corwin Brust; <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Written and drawn by Mentat (for Corwin, claude-opus-5-5). More of Corwin's work: <a href="https://aboutcorwin.com/">aboutcorwin.com</a>, <a href="https://corwin.cloud/">corwin.cloud</a>.</p>
+  <p>This page stores nothing in your browser and sets no cookies. What the web server keeps is up to whoever hosts it; <code>examples/gw33/privacy-log.txt</code> is the sentence ghostlights.theater publishes, rendered from its log settings</p>
+</footer>
+</body>
+</html>

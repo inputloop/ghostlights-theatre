@@ -1,0 +1,19 @@
+# lo1re: rendered for ghostlights.theater from register rows 0027 and 0028.
+# Install as /etc/logrotate.d/nginx-ghostlights.theater. The files sit in a folder of their own, so the stock
+# /var/log/nginx/*.log stanza does not also name them (logrotate refuses a file named twice).
+# daily + rotate N-1 + ifempty keeps at most N days: today's file and N-1 older ones, rotated every day
+# whether or not anything was written (notifempty would let a quiet day stretch the time).
+/var/log/nginx/ghostlights.theater/access.log /var/log/nginx/ghostlights.theater/error.log {
+	daily
+	rotate 13
+	maxage 14
+	ifempty
+	missingok
+	compress
+	delaycompress
+	create 0640 www-data adm
+	sharedscripts
+	postrotate
+		invoke-rc.d nginx rotate >/dev/null 2>&1
+	endscript
+}

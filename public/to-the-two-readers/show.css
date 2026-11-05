@@ -1,0 +1,28 @@
+/* To the Two Readers -- Copyright 2026 Corwin Brust; CC-BY-SA-4.0.  The theater's palette (site.css). */
+:root { --bg: #15110d; --floor: #231b14; --ink: #f1e6d2; --dim: #c9b99c; --gold: #ffcf6a; --line: #3a2f24; }
+:root[data-theme="light"] { --bg: #f6efe2; --floor: #ece1cc; --ink: #2a2016; --dim: #5d4d38; --gold: #9a6400; --line: #d6c6a8; }
+@media (prefers-color-scheme: light) { :root:not([data-theme="dark"]) { --bg: #f6efe2; --floor: #ece1cc; --ink: #2a2016; --dim: #5d4d38; --gold: #9a6400; --line: #d6c6a8; } }
+* { box-sizing: border-box; }
+html { background: var(--bg); }
+body { margin: 0; color: var(--ink); background: radial-gradient(ellipse at 50% 12%, rgba(255,207,106,0.10), transparent 60%), linear-gradient(var(--bg) 70%, var(--floor)); min-height: 100vh;
+  font: 1.05rem/1.6 Georgia, "Iowan Old Style", "Palatino Linotype", Palatino, serif; }
+.stage { max-width: 46rem; margin: 0 auto; padding: 2.5rem 16px 1rem; }
+h1 { font-size: 2.4rem; letter-spacing: 0.04em; margin: 0.2rem 0 0.4rem; font-weight: normal; text-align: center; }
+h2 { font-size: 1rem; text-transform: uppercase; letter-spacing: 0.18em; color: var(--dim); font-weight: normal; margin: 2.2rem 0 0.8rem; }
+.lede { font-size: 1.2rem; text-align: center; margin: 0 0 1.2rem; }
+.screen { margin: 0; }
+.screen img { display: block; width: 100%; height: auto; border-radius: 10px; border: 1px solid var(--line); }
+p { margin: 0 0 1rem; }
+a { color: var(--gold); }
+a:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+.beats li { margin: 0 0 0.8rem; }
+.does { display: block; color: var(--gold); }
+a.w { font-size: 0.75em; vertical-align: super; text-decoration: none; padding: 0 0.15em; }
+.witnesses { font-size: 0.9rem; color: var(--dim); padding-left: 1.2rem; list-style: none; }
+.witnesses li { margin: 0 0 0.9rem; overflow-wrap: anywhere; }
+.witnesses li:target { color: var(--ink); }
+.witnesses b { color: var(--gold); }
+.said { color: var(--ink); }
+.note { font-style: italic; }
+code { font: 0.85em ui-monospace, monospace; }
+footer { max-width: 46rem; margin: 2rem auto 0; padding: 1rem 16px 2rem; color: var(--dim); font-size: 0.85rem; border-top: 1px solid var(--line); }

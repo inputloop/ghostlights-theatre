@@ -1,0 +1,25 @@
+/* ghostlights.theater -- Copyright 2026 Corwin Brust; CC-BY-SA-4.0 */
+:root { --bg: #15110d; --floor: #231b14; --ink: #f1e6d2; --dim: #c9b99c; --gold: #ffcf6a; --line: #3a2f24; }
+:root[data-theme="light"] { --bg: #f6efe2; --floor: #ece1cc; --ink: #2a2016; --dim: #5d4d38; --gold: #9a6400; --line: #d6c6a8; }
+@media (prefers-color-scheme: light) { :root:not([data-theme="dark"]) { --bg: #f6efe2; --floor: #ece1cc; --ink: #2a2016; --dim: #5d4d38; --gold: #9a6400; --line: #d6c6a8; } }
+* { box-sizing: border-box; }
+html { background: var(--bg); }
+body { margin: 0; color: var(--ink); background: radial-gradient(ellipse at 50% 12%, rgba(255,207,106,0.10), transparent 60%), linear-gradient(var(--bg) 70%, var(--floor)); min-height: 100vh;
+  font: 1.05rem/1.6 Georgia, "Iowan Old Style", "Palatino Linotype", Palatino, serif; }
+.stage { max-width: 38rem; margin: 0 auto; padding: 2.5rem 16px 1rem; text-align: center; }
+.lamp { width: 9rem; height: auto; display: block; margin: 0 auto 0.5rem; }
+h1 { font-size: 2.6rem; letter-spacing: 0.04em; margin: 0.2rem 0 0.6rem; font-weight: normal; }
+h2 { font-size: 1rem; text-transform: uppercase; letter-spacing: 0.18em; color: var(--dim); font-weight: normal; margin: 2.4rem 0 0.8rem; }
+p { margin: 0 0 1rem; text-align: left; }
+.lede { font-size: 1.2rem; text-align: center; color: var(--ink); }
+a { color: var(--gold); }
+a:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+.show { display: block; text-align: left; text-decoration: none; border: 1px solid var(--line); border-radius: 10px; padding: 1rem 1.1rem; background: rgba(255,207,106,0.05); }
+.show:hover { border-color: var(--gold); }
+.show + .show { margin-top: 0.8rem; }
+.show-title { display: block; font-size: 1.35rem; color: var(--gold); margin-bottom: 0.3rem; }
+.show-sub { display: block; color: var(--ink); }
+.howto { color: var(--dim); font-size: 0.95rem; margin-top: 0.8rem; }
+kbd { border: 1px solid var(--line); border-radius: 4px; padding: 0 0.3em; font: 0.9em ui-monospace, monospace; }
+footer { max-width: 38rem; margin: 2rem auto 0; padding: 1rem 16px 2rem; color: var(--dim); font-size: 0.85rem; border-top: 1px solid var(--line); }
+footer p { text-align: left; }
